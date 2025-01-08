@@ -1,15 +1,16 @@
 /* Base styles */
 body {
-    background-color: #f9f9f8;
+    background-color: #f5f4ef;
     color: #1a1a1a;
     padding: 2rem;
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.75px;
 }
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -25,7 +26,7 @@ h1 {
 h2 {
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 1.5rem 0;
 }
 
@@ -86,13 +87,15 @@ footer {
 
 .footer-right {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     font-family: "Courier New", Courier, monospace;
 }
 
 /* Line length control */
 .content p {
-    max-width: 90ch; /* Limit line length for better readability */
+    max-width: 70ch; /* Limit line length for better readability */
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Contact Form */
