@@ -1,7 +1,11 @@
+[workspace]
+members = ["."]
+
 [package]
 name = "aliuahma"
 version = "0.1.0"
 edition = "2021"
+default-run = "aliuahma"
 
 [dependencies]
 axum = "0.8.1"
