@@ -27,8 +27,9 @@ async fn main() {
 
     let app = Router::new()
         .route("/", get(home))
-        .route("/education", get(handlers::education::education))
+        .route("/education", get(handlers::contact::contact))
         .nest_service("/assets", ServeDir::new("assets"))
+        .nest_service("/resume", ServeDir::new("resume"))
         .with_state(tera.clone())
         .fallback(handler_404);
 
