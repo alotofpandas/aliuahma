@@ -13,3 +13,7 @@ thiserror = "2.0.9"
 anyhow = "1.0.95"
 tracing = "0.1.41"
 tracing-subscriber = "0.3.19"
+
+[[bin]]
+name = "handler"
+path = "api/handler.rs"
