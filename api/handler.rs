@@ -1,5 +1,19 @@
 use vercel_runtime::{run, Body, Error, Request, Response, StatusCode};
-use tera::{Tera, Context};
+use tera::Tera;
+use lazy_static::lazy_static;
+
+lazy_static! {
+    static ref TEMPLATES: Tera = {
+        let tera = match Tera::new("templates/**/*") {
+            Ok(t) => t,
+            Err(e) => {
+                println!("Parsing error(s): {}", e);
+                ::std::process::exit(1);
+            }
+        };
+        tera
+    };
+}
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -7,26 +21,17 @@ async fn main() -> Result<(), Error> {
 }
 
 pub async fn handler(req: Request) -> Result<Response<Body>, Error> {
-    let tera = match Tera::new("templates/**/*") {
-        Ok(t) => t,
-        Err(_) => return Ok(Response::builder()
-            .status(StatusCode::INTERNAL_SERVER_ERROR)
-            .body("Template error".into())?)
-    };
-    
-    let context = Context::new();
+    let context = tera::Context::new();
     
     match req.uri().path() {
         "/" => {
-            match tera.render("home.html", &context) {
-                Ok(rendered) => Ok(Response::builder()
-                    .status(StatusCode::OK)
-                    .header("Content-Type", "text/html")
-                    .body(rendered.into())?),
-                Err(_) => Ok(Response::builder()
-                    .status(StatusCode::INTERNAL_SERVER_ERROR)
-                    .body("Rendering error".into())?)
-            }
+            let rendered = TEMPLATES.render("home.html", &context)
+                .map_err(|_| Error::from("Template rendering failed"))?;
+            
+            Ok(Response::builder()
+                .status(StatusCode::OK)
+                .header("Content-Type", "text/html")
+                .body(rendered.into())?)
         },
         _ => Ok(Response::builder()
             .status(StatusCode::NOT_FOUND)
