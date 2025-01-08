@@ -9,7 +9,7 @@ async fn main() -> Result<(), Error> {
     run(handler).await
 }
 
-pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
+pub async fn handler(req: Request) -> Result<Response<Body>, Error> {
     let tera = TEMPLATES.get_or_init(|| {
         let mut tera = Tera::default();
         tera.add_raw_templates(vec![
@@ -21,7 +21,17 @@ pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
     });
     
     let context = Context::new();
-    let rendered = tera.render("home.html", &context)
+    
+    // Get the template name based on the path
+    let template_name = match req.uri().path() {
+        "/" => "home.html",
+        "/contact" => "contact.html",
+        _ => return Ok(Response::builder()
+            .status(StatusCode::NOT_FOUND)
+            .body("404 Not Found".into())?),
+    };
+    
+    let rendered = tera.render(template_name, &context)
         .map_err(|e| Error::from(e.to_string()))?;
 
     Ok(Response::builder()
