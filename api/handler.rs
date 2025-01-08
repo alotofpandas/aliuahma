@@ -7,7 +7,7 @@ async fn main() -> Result<(), Error> {
 }
 
 pub async fn handler(_req: Request) -> Result<Response<Body>, Error> {
-    let html = include_str!("../templates/home.html");
+    let html = include_str!("../templates/base.html");
     
     Ok(Response::builder()
         .status(StatusCode::OK)
