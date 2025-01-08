@@ -4,15 +4,23 @@
     <title>{% block title %}Ali Ahmad{% endblock %}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-serif/1.0.0/fonts.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap">
 </head>
 <body>
     <div class="container">
+        <header>
+            <h1><a href="/" class="site-title">Ali Ahmad</a></h1>
+        </header>
+
         {% block content %}{% endblock %}
 
-        <footer>
-            <div class="footer-links">
-                <a href="/education">education</a>
-                <a href="/projects">projects</a>
+        <footer class="monospace">
+            <div class="footer-left">
+                <span class="serif">Ali Ahmad</span>
+            </div>
+            <div class="footer-right monospace">
+                <a href="/education">Contact</a>
+                <a target="_blank" href="/resume/Ahmad_Ali_010425.pdf">Resume</a>
             </div>
         </footer>
     </div>
