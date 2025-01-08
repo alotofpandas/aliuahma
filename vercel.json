@@ -5,6 +5,7 @@
     },
     "routes": [
       { "src": "/assets/(.*)", "dest": "/assets/$1" },
+      { "src": "/resume/(.*)", "dest": "/resume/$1" },
       { "src": "/(.*)", "dest": "/api/handler" }
     ]
   }

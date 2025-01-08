@@ -7,6 +7,8 @@ use std::sync::Arc;
 use tera::Tera;
 use tower_http::services::ServeDir;
 use tracing::info;
+use tower_http::compression::CompressionLayer;
+use tower_http::cache::CacheLayer;
 
 mod error;
 mod handlers;
@@ -30,6 +32,8 @@ async fn main() {
         .route("/contact", get(handlers::contact::contact))
         .nest_service("/assets", ServeDir::new("assets"))
         .nest_service("/resume", ServeDir::new("resume"))
+        .layer(CompressionLayer::new())
+        .layer(CacheLayer::new(60 * 60 * 24)) // Cache for 24 hours
         .with_state(tera.clone())
         .fallback(handler_404);
 
