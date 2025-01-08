@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Ali Ahmad{% endblock %}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-serif/1.0.0/fonts.min.css">
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+
+        <footer>
+            <div class="footer-links">
+                <a href="/education">education</a>
+                <a href="/projects">projects</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
