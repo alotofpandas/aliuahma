@@ -1,5 +1,5 @@
 use vercel_runtime::{run, Body, Error, Request, Response, StatusCode};
-use serde_json::json;
+use tera::{Tera, Context};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -7,13 +7,16 @@ async fn main() -> Result<(), Error> {
 }
 
 pub async fn handler(req: Request) -> Result<Response<Body>, Error> {
-    // Handle your routes here
+    let tera = Tera::new("templates/**/*")?;
+    let context = Context::new();
+
     match req.uri().path() {
         "/" => {
+            let rendered = tera.render("home.html", &context)?;
             Ok(Response::builder()
                 .status(StatusCode::OK)
                 .header("Content-Type", "text/html")
-                .body(include_str!("../templates/home.html").into())?)
+                .body(rendered.into())?)
         }
         _ => {
             Ok(Response::builder()
