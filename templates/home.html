@@ -1,28 +1,31 @@
 {% extends "base.html"%}
 
 {% block content %}
-<h1>Ali Ahmad</h1>
-<div class="email">aliahmad &lsqb;at&rsqb; stanford &lsqb;dot&rsqb; edu</div>
+<main class="content monospace">
+    <p class="intro">
+        I am a 2nd year BS <a href="https://mathematics.stanford.edu">Mathematics</a> and prospective MS 
+        <a href="https://cs.stanford.edu">CS</a> student at 
+        <a href="https://stanford.edu">Stanford University</a>. I conduct robotics research under Professor 
+        <a href="https://profiles.stanford.edu/c-karen-liu">Karen Liu</a> at 
+        <a href="https://tml.stanford.edu/">The Movement Lab (TML)</a>. I am a member of the software team at
+        <a href="https://www.stanfordrobosub.org/">Stanford Robosub</a> where I focus on AUV controls and 
+        simulation testing.
+        <br><br>
+        Previously, I was a software engineer intern at
+        <a href="https://www.gotrestle.com/">Trestle</a>, where I worked on search engine optimization 
+        and backend development. 
+        <br><br>
+        I am an incoming research scientist intern at a robotics startup operating under stealth.
+    </p>
 
-<div class="links">
-    { <a href="https://github.com/aliuahma">github</a> / 
-    <a href="https://www.linkedin.com/in/aliuahma/">linkedin</a> / 
-    <a href="https://x.com/aliuahma">x</a> }
-</div>
-
-<div>
-    studying <a href="/education">a lot of stuff</a> at <a href="https://stanford.edu">stanford</a>.<br>
-    always working on <a href="/projects">something</a> new.<br>
-</div>
-
-<h2>experience</h2>
-<div>
-    <a href="https://ai.stanford.edu">stanford ai lab</a>: student researcher - present
-    <br>
-    <a href="https://www.gotrestle.com/"> trestle</a>: software engineer intern - summer 2024
-</div>
-
-<div class="footer">
-    last updated: 07 Jan 2025 | 🚀
-</div>
+    <section>
+        <h2 class="monospace">Research</h2>
+        <p>
+            I am broadly interested in robot learning. My goal is to create generalizable and 
+            data-efficient robots that seamlessly interact with the physical world. I currently 
+            work on robotic manipulation, motion planning, and control. More recently, I have taken
+            interest in embodied foundation models.
+        </p>
+    </section>
+</main>
 {% endblock %}
