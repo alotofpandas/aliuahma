@@ -1,44 +1,56 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Base styles */
 body {
-    font-family: "Garamond", serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #f9f9f8;
+    color: #1a1a1a;
     padding: 2rem;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+/* Container */
 .container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Typography */
 h1 {
-    font-size: 2rem;
+    font-family: "Garamond", serif;
     font-weight: normal;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 h2 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1.5rem 0;
 }
 
-p {
-    margin-bottom: 1rem;
+.monospace {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.serif {
+    font-family: "Garamond", serif;
+}
+
+.site-title {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-title:hover {
+    color: inherit;
 }
 
 /* Links */
 a {
-    color: #333;
+    color: inherit;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
@@ -47,31 +59,15 @@ a:hover {
     color: #666;
 }
 
-.new-blog-post {
-    font-size: 0.9rem;
-    color: #666;
-    text-decoration: none;
-    float: right;
-    margin-top: 0.5rem;
+/* Header */
+.right-align {
+    text-align: right;
+    margin-bottom: 3rem;
 }
 
-/* Sections */
-.section {
+/* Content sections */
+section {
     margin: 2rem 0;
-}
-
-/* Contact and social links */
-.contact {
-    margin-top: 3rem;
-}
-
-.social-links {
-    margin-top: 1rem;
-}
-
-.separator {
-    margin: 0 0.5rem;
-    color: #666;
 }
 
 /* Footer */
@@ -79,16 +75,100 @@ footer {
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer-links {
+.footer-left {
+    font-size: 1rem;  /* Adjust size as needed */
+}
+
+.footer-right {
     display: flex;
     gap: 2rem;
+    font-family: "Courier New", Courier, monospace;
 }
 
-.footer-links a {
-    text-decoration: none;
+/* Line length control */
+.content p {
+    max-width: 90ch; /* Limit line length for better readability */
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 2rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f8;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+/* Form validation styles */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #ff4444;
+}
+
+.positions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.positions li {
+    font-size: 0.9rem;
+    line-height: 1.8;
     color: #333;
+    padding-left: 0;
+}
+
+.dash-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dash-list li {
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.8;
 }
 
 /* Responsive adjustments */
@@ -99,5 +179,9 @@ footer {
     
     h1 {
         font-size: 1.75rem;
+    }
+    
+    .content {
+        font-size: 0.9rem;
     }
 }
