@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Ali Ahmad{% endblock %}</title>
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-serif/1.0.0/fonts.min.css" async>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" async>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/" class="site-title">Ali Ahmad</a></h1>
+        </header>
+
+        <main class="content monospace">
+            <p class="intro">
+                I am a 2nd year BS <a href="https://mathematics.stanford.edu">Mathematics</a> and prospective MS 
+                <a href="https://cs.stanford.edu">CS</a> student at 
+                <a href="https://stanford.edu">Stanford University</a>. I conduct robotics research under Professor 
+                <a href="https://profiles.stanford.edu/c-karen-liu">Karen Liu</a> at 
+                <a href="https://tml.stanford.edu/">The Movement Lab (TML)</a> with the mentorship of 
+                <a href="https://wualbert.github.io/">Albert Wu</a>. 
+                <br><br>
+                Previously, I was a software engineer intern at
+                <a href="https://www.gotrestle.com/">Trestle</a>, where I worked on search engine optimization 
+                and backend development. I was also a member of the software team at 
+                <a href="https://www.stanfordrobosub.org/">Stanford Robosub</a> where I focused on AUV controls 
+                and simulation testing.
+                <br><br>
+                This summer, I'm joining a startup as an Member of Technical Staff working on robotics foundational models.
+            </p>
+        
+            <section>
+                <h2 class="monospace">Research</h2>
+                <p>
+                    I am broadly interested in robot learning. My goal is to create generalizable and 
+                    data-efficient robots that seamlessly interact with the physical world. I currently 
+                    work on robotic manipulation, motion planning, and control. More recently, I have taken
+                    interest in embodied foundation models.
+                </p>
+            </section>
+        </main>
+
+        <footer class="monospace">
+            <div class="footer-left">
+                <span class="serif">Ali Ahmad</span>
+            </div>
+            <div class="footer-right monospace">
+                <a href="/contact">Contact</a>
+                {% comment %} <a target="_blank" href="/resume/Ahmad_Ali_013025.pdf">Resume</a> {% endcomment %}
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
