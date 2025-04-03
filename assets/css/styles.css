@@ -88,7 +88,6 @@ footer {
 .footer-right {
     display: flex;
     gap: 1rem;
-    font-family: "Courier New", Courier, monospace;
 }
 
 /* Line length control */
