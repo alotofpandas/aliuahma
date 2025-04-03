@@ -30,12 +30,6 @@ h2 {
     margin: 1.5rem 0;
 }
 
-.monospace {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
 .serif {
     font-family: "Garamond", serif;
 }
