@@ -93,7 +93,6 @@ footer {
 
 /* Line length control */
 .content p {
-    max-width: 70ch; /* Limit line length for better readability */
     font-size: 0.95rem;
     line-height: 1.6;
 }
