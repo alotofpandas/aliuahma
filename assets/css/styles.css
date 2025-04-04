@@ -46,6 +46,10 @@ h2 {
     margin-top: 2rem; /* Add space above the line break */
 }
 
+.bold {
+    font-weight: bold;
+}
+
 
 /* Links */
 a {
