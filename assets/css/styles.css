@@ -50,6 +50,10 @@ h2 {
     font-weight: bold;
 }
 
+.italic {
+    font-style: italic;
+}
+
 
 /* Links */
 a {
