@@ -123,9 +123,9 @@ body {
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 0 max(20px, calc((100vw - 800px) / 2));
+    padding: 0 max(20px, calc((100vw - 700px) / 2));
     font-family: "Times New Roman", Times, serif;
 }
 
