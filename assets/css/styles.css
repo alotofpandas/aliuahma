@@ -117,21 +117,21 @@ body {
     color: #1a1a1a;
     padding: 2rem 0;
     line-height: 1.25;
-    font-family: Georgia, serif;
+    font-family: "Times New Roman", Times, serif;
     letter-spacing: -0.0px;
 }
 
 /* Container */
 .container {
-    max-width: 650px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 max(20px, calc((100vw - 650px) / 2));
-    font-family: Georgia, serif;
+    padding: 0 max(20px, calc((100vw - 800px) / 2));
+    font-family: "Times New Roman", Times, serif;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -147,7 +147,7 @@ h2 {
 }
 
 p {
-    font-family: Georgia, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .serif {
@@ -164,6 +164,11 @@ p {
 
 .drafting-mono {
     font-family: 'DraftingMono', 'IBM Plex Mono', monospace;
+}
+
+#obfuscated-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
 }
 
 .site-title {
