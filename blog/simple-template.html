@@ -35,22 +35,27 @@
                 </nav>
             </div>
             
-            <h2 class="blog-title">On turning 20</h2>
+            <!-- REPLACE: Blog title -->
+            <h2 class="blog-title">{{BLOG_TITLE}}</h2>
             
-            <p class="italic">August 10, 2025</p>
+            <!-- REPLACE: Published date -->
+            <p class="italic">{{PUBLISHED_DATE}}</p>
 
+            <!-- REPLACE: Caption -->
             <p>
-                Caption.
+                {{CAPTION}}
             </p>
 
             <hr>
 
-            <p>
-                Content.
-            </p>
+            <!-- REPLACE: Content -->
+            <div class="blog-content">
+                {{CONTENT}}
+            </div>
 
+            <!-- REPLACE: Edited date -->
             <p class="with-space italic">
-                Edited Month Day, Year
+                Edited {{EDITED_DATE}}
             </p>
         </div>
     </div>

@@ -35,24 +35,47 @@
                 </nav>
             </div>
             
-            <h2 class="blog-title">On turning 20</h2>
+            <h2 class="blog-title" id="blog-title">Blog Post Title</h2>
             
-            <p class="italic">August 10, 2025</p>
+            <p class="italic" id="published-date">Published Date</p>
 
-            <p>
-                Caption.
+            <p id="caption">
+                Caption goes here.
             </p>
 
             <hr>
 
-            <p>
-                Content.
-            </p>
+            <div class="blog-content" id="content">
+                <p>Content goes here.</p>
+            </div>
 
-            <p class="with-space italic">
-                Edited Month Day, Year
+            <p class="with-space italic" id="edited-date">
+                Edited Date
             </p>
         </div>
     </div>
+
+    <script>
+        // Blog post configuration - EDIT THESE VALUES
+        const blogConfig = {
+            title: "Your Blog Post Title Here",
+            publishedDate: "Month Day, Year",
+            caption: "Your caption here.",
+            content: `
+                <p>Your main content goes here.</p>
+                <p>You can use multiple paragraphs.</p>
+                <h3>Subheadings work too</h3>
+                <p>More content...</p>
+            `,
+            editedDate: "Month Day, Year"
+        };
+
+        // Apply the configuration
+        document.getElementById('blog-title').textContent = blogConfig.title;
+        document.getElementById('published-date').textContent = blogConfig.publishedDate;
+        document.getElementById('caption').textContent = blogConfig.caption;
+        document.getElementById('content').innerHTML = blogConfig.content;
+        document.getElementById('edited-date').textContent = `Edited ${blogConfig.editedDate}`;
+    </script>
 </body>
 </html>
