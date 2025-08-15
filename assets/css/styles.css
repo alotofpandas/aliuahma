@@ -64,7 +64,7 @@ p {
 }
 
 
-#obfuscated-text {
+#obfuscated-text, #obfuscated-text-1, #obfuscated-text-2 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
 }

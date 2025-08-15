@@ -45,7 +45,7 @@
 
         <p>
             I'm currently a junior at <a href="https://www.stanford.edu">Stanford University</a>,
-            studying CS. I'm working at <span id="obfuscated-text"></span> as a research intern focusing
+            studying CS. I'm working at <span id="obfuscated-text-1"></span> as a research intern focusing
             on robot foundation models. My interests lie in robotics and generative modeling. I deeply
             believe in human ingenuity and the potential of AI. I am interested in hard problems, big 
             and small. 
@@ -71,13 +71,13 @@
         </p>
 
         <h2>
-            Updates
+            News
         </h2>
         
         <p>
         May 2025 — My team <a href="https://www.youtube.com/watch?v=BcMVKxYTlHo">won the VEX Robotics World Championship</a>!
         <br>
-        April 2025 — I joined <span id="obfuscated-text"></span> as a research intern.
+        April 2025 — I joined <span id="obfuscated-text-2"></span> as a research intern.
         <br>
         November 2024 — I joined <a href="https://tml.stanford.edu/">The Movement Lab</a> as a research assistant.
         <br>
@@ -123,9 +123,14 @@
         }
         
         function updateObfuscatedText() {
-            const element = document.getElementById('obfuscated-text');
-            if (element) {
-                element.textContent = generateRandomText(5);
+            const element1 = document.getElementById('obfuscated-text-1');
+            const element2 = document.getElementById('obfuscated-text-2');
+            
+            if (element1) {
+                element1.textContent = generateRandomText(5);
+            }
+            if (element2) {
+                element2.textContent = generateRandomText(5);
             }
         }
         
