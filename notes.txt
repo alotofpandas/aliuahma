@@ -1,0 +1,20 @@
+Basic usage:
+<span class="drafting-mono">Regular text</span>
+
+With different weights:
+<span class="drafting-mono" style="font-weight: 100;">Thin</span>
+<span class="drafting-mono" style="font-weight: 200;">ExtraLight</span>
+<span class="drafting-mono" style="font-weight: 300;">Light</span>
+<span class="drafting-mono" style="font-weight: 400;">Regular</span>
+<span class="drafting-mono" style="font-weight: 500;">Medium</span>
+<span class="drafting-mono" style="font-weight: 600;">SemiBold</span>
+<span class="drafting-mono" style="font-weight: 700;">Bold</span>
+
+With italics:
+<span class="drafting-mono" style="font-style: italic;">Italic</span>
+<span class="drafting-mono" style="font-weight: 700; font-style: italic;">Bold Italic</span>
+
+Or using CSS classes:
+.drafting-light { font-family: 'DraftingMono'; font-weight:300; }
+.drafting-bold { font-family: 'DraftingMono'; font-weight: 700;}
+.drafting-italic { font-family: 'DraftingMono'; font-style:italic; }

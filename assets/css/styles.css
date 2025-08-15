@@ -1,3 +1,116 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DraftingMono';
+    src: url('/assets/fonts/DraftingMono-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* Base styles */
 body {
     background-color: #f5f4ef;
@@ -31,6 +144,10 @@ h2 {
 
 .serif {
     font-family: "Garamond", serif;
+}
+
+.drafting-mono {
+    font-family: 'DraftingMono', 'IBM Plex Mono', monospace;
 }
 
 .site-title {
