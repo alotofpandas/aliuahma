@@ -67,6 +67,12 @@
         </p>
 
         <h2>
+            Updates
+        </h2>
+
+        <p>[April] I joined <span id="obfuscated-text">{placeholder}</span></p>
+
+        <h2>
             Interests
         </h2>
 
@@ -103,5 +109,27 @@
             <span class="italic">Edited May 14, 2025</span>
         </p>
     </div>
+    
+    <script>
+        function generateRandomText(length) {
+            const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+        
+        function updateObfuscatedText() {
+            const element = document.getElementById('obfuscated-text');
+            if (element) {
+                element.textContent = generateRandomText(5);
+            }
+        }
+        
+        setInterval(updateObfuscatedText, 100);
+        
+        updateObfuscatedText();
+    </script>
 </body>
 </html>
